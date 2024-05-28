@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"/>
+
+    <style>
+        .table-container table, .table-container td {
+            border: 1px solid #ebebeb;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        .mobile-table {
+            width: 100%;
+            display: none;
+        }
+
+        .desktop-table {
+            display: table;
+            width: 100%;
+        }
+        @media (max-width: 500px) {
+            .desktop-table {
+                display: none !important;
+            }
+            .mobile-table {
+                display: table !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="color: black; text-align: center; margin: auto; max-width: 680px; min-width: 300px !important; padding: 24px; box-sizing: border-box !important; font-family: 'Open Sans', sans-serif; max-width: 600px; margin: auto;">
+         <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"  style="margin:24px auto;">
+            <tr>
+              <td align="right" valign="middle" style="width: 100px;" >
+                <img src="download.png" width="40" height="40" alt="img" srcset="" style="display: block;">
+              </td>
+              <td align="left" valign="middle">
+                <p style="padding-left: 10px; font-family: 'Open Sans';font-size: 16px;font-style: normal;font-weight: 600;">Canal Ético - Universidad Europea del Atlántico</p>
+              </td>
+            </tr>
+          </table>
+
+        <div class="email_heading" style="background-color: #FAFAFA; text-align: center; padding: 24px;">
+            <img src="<%= url %>/images/complaint.png" width="48" height="48" alt="img icon" srcset="">
+            <p style="font-size: 20px; font-weight: 600; margin-top: 16px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure amet hic libero, beatae perspiciatis dele. Nemo, itaque pariatur!</p>
+            <p style="font-size: 14px; font-weight: 400; margin-top: 16px; margin-bottom: 0px;">Se ha agregado un nuevo informe en el sistema</p>
+        </div>
+        
+        <div class="email_message" style="margin-top: 24px; margin-bottom: 32px; font-size: 13px; color: #424242; font-weight: 400; text-align: left; padding: 10px 30px;">
+            hello <%= name %>: <br> <br>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quisquam incidunt sequi unde delectus fugiat veniam inventore dignissimos est aut laudantium beatae minus sapiente odio aperiam mollitia, accusamus maiores illo.
+        </div>
+        <div class="table-container" style="padding: 0px 30px; text-align: left;">
+            <table class="desktop-table">
+                <tr>
+                    <td style="min-width:160px; background-color: #F5F5F5; padding: 10px 16px;">Lorem ipsum dolor sit amet consectetur adipisicing ?:</td>
+                    <td style="width: 100%; padding: 10px 16px;"><%= report_id %></td>
+                </tr>
+            </table>
+            <table class="mobile-table">
+                <tr>
+                    <td style="min-width:160px; background-color: #F5F5F5; padding: 10px 16px;">Lorem ipsum dolor sit amet cons, quo ratione :</td>
+                </tr>
+                <tr>
+                    <td style="width: 100%; padding: 10px 16px;"><%= report_id %></td>
+                </tr>
+            </table>
+            <div class="email_footer" style="color:  #616161; text-align: left; font-family: 'Open Sans'; font-size: 12px; font-style: normal; font-weight: 400; line-height: 20px; margin-top: 30px; margin-left: auto; margin-right: auto;">
+                <p style="font-family: 'Open Sans';font-size: 13px;font-style: normal;font-weight: 600; color: #424242;">Lorem ipsum dolor  :</p>
+                Lorem ipsum dolor sit amet.: <a href="<%= url %>?report_id=<%= report_id %>" target="_blank" style="color:#01579B; text-decoration: none;" rel="noopener noreferrer"><%= url %>?report_id=<%= report_id %></a>
+            </div>
+        </div>
+        <hr style="border-top: 1px solid #E0E0E0; margin:10px 24px;">
+        <div class="email_footer" style="padding: 0px 30px; color:  #616161; text-align: left; font-family: 'Open Sans'; font-size: 12px; font-style: normal; font-weight: 400; line-height: 20px; margin-left: auto; margin-right: auto;">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, eum.
+            <a href="mailto:canal.informacion@uneatlantico.es" style="color:#01579B; text-decoration: none;">canal.informacion@uneatlantico.es.</a>
+            <br>
+            Un saludo.
+        </div>
+        <div style="text-align: center;font-family: 'Open Sans';font-size: 12px;font-style: normal;font-weight: 400; color: #616161;">
+            <p>Ha recibido este correo porque se encuentra dado de alta en</p>
+            <p style="color: #01579B;">Canal Ético UNEATLANTICO</p>
+        </div>
+    </div>
+</body>
+
+</html>
